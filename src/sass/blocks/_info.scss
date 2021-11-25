@@ -1,0 +1,25 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    
+    &__wrapper {
+    height: 30px;
+    background: linear-gradient($main-color, 95%, rgb(182, 112, 13));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    &__info-text {
+        font-size: 15px;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+    }
+    &__wrapper-info {
+        display: flex;
+        img {
+            margin-right: 5px;
+        }
+    }
+
+}

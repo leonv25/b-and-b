@@ -1,0 +1,49 @@
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 991px) {
+    .header {
+        &__logo {
+            margin-left: 20px;
+            width: 80px;
+        }
+        &__search {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        #menu {
+            display: none;
+        }
+        &__logo {
+            margin-left: 20%;
+        }
+        &__wrapper-nav {
+            position: relative;
+        }
+        
+    }
+    #humburger {
+        display: inline;
+        position: absolute;
+        left: -8em;
+        top: 11.5px;
+        width: 40px;
+        height: 40px;
+        border-style: outset;
+        border-radius: 10px;
+        z-index: 15;
+    }
+
+    
+}
+
+@media (max-width: 575px) {
+    
+    
+    
+}

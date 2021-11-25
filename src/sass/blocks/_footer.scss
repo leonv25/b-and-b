@@ -1,0 +1,15 @@
+.footer {
+    width: 100%;
+
+    //transform: translateY(30px);
+    position: absolute;
+   
+    &__wrapper {
+        height: 70px;
+        width: 100%;
+        // top: -70px;
+        background: greenyellow;
+        
+    }
+    
+}
