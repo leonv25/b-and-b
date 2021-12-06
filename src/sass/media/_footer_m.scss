@@ -1,0 +1,33 @@
+@media (max-width: 575px) {
+    .footer {
+        &__wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+        }
+        &__container {
+            padding: 0 5px;
+
+            &:first-child {
+                margin-left: 0%;
+            }
+
+            &:last-child {
+                padding-left: 15px;
+                position: absolute;
+                left: 0;
+                bottom: -35px;
+                width: 90vw;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+        }
+        &__tel {
+            margin-bottom: 5px;
+        }
+        &__mail {
+            margin-top: 5px;
+        }
+    }
+}

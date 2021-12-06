@@ -1,15 +1,65 @@
 .footer {
-    width: 100%;
-
-    //transform: translateY(30px);
     position: absolute;
-   
-    &__wrapper {
-        height: 70px;
-        width: 100%;
-        // top: -70px;
-        background: greenyellow;
-        
-    }
+    width: 100%;
+    height: 190px;
+    bottom: -130px;
+    background: linear-gradient(#f9ede4 50%,#ffd5b6);
+    font-size: 12px;
     
+    &__wrapper {
+        padding-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+            margin-right: 7%;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__container {
+        padding: 0 30px;
+        a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 3px;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+
+    &__logo {
+        display: block;
+        img {
+            width: 60px;
+        }
+    }
+
+    &__tel {
+        margin-bottom: 10px;
+    }
+    &__working {
+        display: flex;
+    }
+    &__mail {
+        margin-top: 10px;
+    }
+
+    &__block-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        //background: linear-gradient($main-color, 95%, rgb(182, 112, 13));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: #ebebeb 1px solid;
+        span {
+            display: block;
+        }
+    }
 }

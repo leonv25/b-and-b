@@ -1,0 +1,32 @@
+@media (max-width: 1200px) {
+    .order {
+        &__txt {
+            font-size: 21px;
+        }
+        &__wrapper-btn {
+            margin-top: 5%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .order {
+        &__txt {
+            font-size: 20px;
+        }
+    }
+
+}
+
+// @media (max-width: 767px) {
+
+// }
+
+@media (max-width: 575px) {
+    .order {
+        &__txt {
+            font-size: 17px;
+        }
+    }
+
+}

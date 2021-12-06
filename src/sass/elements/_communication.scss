@@ -1,0 +1,52 @@
+.communication {
+    overflow: hidden;
+    
+    &__wrapper {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+    }
+    &__img {
+        img {
+            width: 100%;
+            height: 50vh;
+            object-fit: cover;
+        }
+    }
+    &__block {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 18px;
+        height: 100vh;
+        width: 80%;
+    }
+    &__txt {
+        font-size: 23px;
+        font-weight: 500;
+        text-align: center;
+        color: rgb(253, 253, 253);
+        text-shadow: 1px 1px 0px rgb(5, 5, 5);
+        span {
+            font-weight: 700;
+            color: $main-color;
+            text-shadow: 1px 1px 0px rgb(5, 5, 5);
+        }
+    }
+    &__wrapper-btn {
+        .button_communication {
+            width: 150px;
+            height: 45px;
+            font-size: 18px;
+            line-height: 17px;
+            margin-top: 15%;
+        }
+        
+    }
+    
+}

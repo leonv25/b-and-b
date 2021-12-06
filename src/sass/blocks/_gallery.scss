@@ -1,0 +1,12 @@
+.cards {
+    &__card_gallery {
+        min-width: 24vw;
+        height: 16vw;
+        padding: 0.25%;
+    }
+    
+    &__background-img_gallery {
+        min-width: 24vw;
+        height: 16vw;
+    }
+}

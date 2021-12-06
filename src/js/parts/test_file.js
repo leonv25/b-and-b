@@ -1,4 +1,4 @@
 function test_func () {
-    alert(25);
+    console.log('test JS');
 }
 module.exports = test_func;
