@@ -1,13 +1,26 @@
+.modal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .load {
+        position: absolute;
+        opacity: 0.3;
+        img {
+            border-radius: 50%;
+        }
+    }
+}
 .form {
     position: relative;
     margin: 70px auto 0;
-    max-width: 575px;
-    max-height: 530px;
+    width: 575px;
+    max-height: 565px;
     overflow: auto;
     padding: 20px 40px;
     background: #fff;
     box-shadow: 0 4px 20px rgb(0 0 0 / 15%);
     border-radius: 4px;
+    
     &__title {
         font-weight: 500;
         line-height: 18px;

@@ -64,8 +64,6 @@
     </header>
 
     <main class="content">
-       
-        
 
         <div class="container">
             <section class="product-page">
@@ -104,7 +102,7 @@
                                     Сауна: 330 см
                                 </p>
                                 <p>
-                                    <b>Тип деревини:  НОНДИЧНА СОСНА / ТЕРМО ДЕРЕВО</b>
+                                    <b>Тип деревини:  НОРДИЧНА СОСНА / ТЕРМО ДЕРЕВО</b>
                                 </p>
                                 <ul> Текст у формі списку:
                                     <li>Перелік 1</li>
@@ -294,77 +292,98 @@
 
                 </div>
 
-
-                
-
-
             </section>
         </div>
     </main>
 
     <section class="forms" id="forms_wrapper">
-        
  
         <div class="buy-form" id="buy_form">
-            <div class="form">
-                <div class="form__title">
-                    Введіть контактні дані для оформлення замовлення
-                </div>
-                <form action="#">
-                    <div class="form__wrapper">
-                        <div>
-                            <label for="name">
-                                Ваше ім’я
-                                <span>*</span>
-                            </label>
-                            <input name="user_name" type="text" required>
-                        </div>
-                        <div>
-                            <label for="phone">Ваш телефон <span>*</span></label>
-                            <input name="phone" id="phone" type="tel" required="">
+            <div class="modal-wrapper">
+                <div class="form">
+                    <div class="form__title">
+                        Введіть контактні дані для оформлення замовлення
+                    </div>
+                    <form action="#">
+                        <div class="form__wrapper">
+                            <div>
+                                <label for="name">
+                                    Ваше ім’я
+                                    <span>*</span>
+                                </label>
+                                <input name="user_name" type="text" required>
+                            </div>
+                            <div>
+                                <label for="city">
+                                    Населений пункт
+                                    <span>*</span>
+                                </label>
+                                <input name="city" type="text" required>
+                            </div>
+                            <div>
+                                <label for="phone">Ваш телефон <span>*</span></label>
+                                <input name="phone" id="phone" type="tel" required="">
+                            </div>
+                            
                         </div>
                         
-                    </div>
-                    
-                    <button class="button">Відправити</button>
-                    <div class="form__close" id="buy_closeForm">×</div>
-                </form>
+                        <button class="button">Відправити</button>
+                        <div class="form__close" id="buy_closeForm">×</div>
+                    </form>
+                </div>
+                <div class="load">
+                    <img src="icons/load/load.gif" alt="load_img">
+                </div>
             </div>
+            
         </div>
 
-        <div class="order-form" id="rent_form">
-            <div class="form">
-                <div class="form__title">
-                    Вкажіть інформацію для замовлення оренди
+        <div class="rent-form" id="rent_form">
+            <div class="modal-wrapper">
+                <div class="form">
+                    <div class="form__title">
+                        Вкажіть інформацію для замовлення оренди
+                    </div>
+                    <form action="#">
+                        <div class="form__wrapper">
+                            <div>
+                                <label for="name">
+                                    Ваше ім’я
+                                    <span>*</span>
+                                </label>
+                                <input name="user_name" type="text" required>
+                            </div>
+                            <div>
+                                <label for="city">
+                                    Населений пункт
+                                    <span>*</span>
+                                </label>
+                                <input name="city" type="text" required>
+                            </div>
+                            <div>
+                                <label for="phone">Ваш телефон <span>*</span></label>
+                                <input name="phone" id="phone" type="tel" required="">
+                            </div>
+                        </div>
+                        <div class="form__wrapper">
+                            <div>
+                                <label for="time">Тривалість оренди (днів) <span>*</span></label>
+                                <input name="time" id="time" type="number" min="1" required>
+                            </div>
+                            <div>
+                                <label for="date">Дата початку оренди <span>*</span></label>
+                                <input name="date" id="date" type="date" min="2021-12-11" required>
+                            </div>
+                        </div>
+                        <button class="button">Відправити</button>
+                        <div class="form__close" id="rent_closeForm">×</div>
+                    </form>
                 </div>
-                <form action="#">
-                    <div class="form__wrapper">
-                        <div>
-                            <label for="name">
-                                Ваше ім’я
-                                <span>*</span>
-                            </label>
-                            <input name="user_name" type="text" required>
-                        </div>
-                        <div>
-                            <label for="phone">Ваш телефон <span>*</span></label>
-                            <input name="phone" id="phone" type="tel" required="">
-                        </div>
-                    </div>
-                    <div class="form__wrapper">
-                        <div>
-                            <label for="time">Тривалість оренди (днів) <span>*</span></label>
-                            <input name="time" id="time" type="number" required>
-                        </div>
-                        <div>
-                            <label for="date">Дата початку оренди <span>*</span></label>
-                            <input name="date" id="date" type="date" required>
-                        </div>
-                    </div>
-                    <button class="button">Відправити</button>
-                    <div class="form__close" id="rent_closeForm">×</div>
-                </form>
+                <div class="load">
+                    <img src="icons/load/load.gif" alt="load_img">
+                </div>
             </div>
+            
         </div>
             
     </section>
