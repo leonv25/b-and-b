@@ -1,6 +1,10 @@
 @import 'base/variables';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
 }
 body {
     margin: auto;
@@ -14,6 +18,7 @@ main {
     position: relative;
     top: -70px;
     .container {
+        width: 100%;
         margin-top: 10px;
         .order {
             margin-top: 10px;
@@ -33,6 +38,34 @@ main {
         .gallery {
             margin-top: 10px;
         }
+        //page catalog
+        .catalog {
+            margin-top: 70px;
+        }
+        .product-page {
+            margin-top: 70px;
+        }
+    }
+}
+.forms {
+    display: none;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    transition: .5s;
+    z-index: 30;
+    .order-form {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+    .buy-form {
+        display: none;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -43,6 +76,7 @@ main {
 @import 'elements/titles';
 @import 'elements/communication';
 @import 'elements/form';
+@import 'elements/text-pages';
 
 @import 'blocks/info';
 @import 'blocks/header';
@@ -52,9 +86,20 @@ main {
 @import 'blocks/gallery';
 @import 'blocks/footer';
 
+@import 'blocks/page_catalog';
+@import 'blocks/page_product-page';
+@import 'blocks/page_contacts';
+@import 'blocks/page_company';
+@import 'blocks/page_text-content';
+@import 'blocks/page_404';
+
 @import 'media/info_m';
 @import 'media/header_m';
 @import 'media/slider_m';
 @import 'media/cards_m';
 @import 'media/communication_m';
+@import 'media/form_m';
 @import 'media/footer_m';
+@import 'media/page-contacts_m';
+
+@import 'import_css/swiper';

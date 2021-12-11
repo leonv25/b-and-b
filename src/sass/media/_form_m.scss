@@ -1,0 +1,16 @@
+@media (max-height: 480px) {
+    .form {
+        label{
+            margin-top: 5px;
+        }
+        input {
+            margin-top: 5px;
+            height: 25px;
+            padding: 0 10px;
+        }
+        textarea {
+            padding: 5px;
+        }
+    }
+
+}

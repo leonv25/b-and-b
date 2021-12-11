@@ -1,8 +1,12 @@
 .titles {
-    text-align: center;
-    font-size: 25px;
-    font-weight: 900;
-    color: $main-color;
-    line-height: 25px;
-    margin-bottom: 7px;
+    h1, h2, h3 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: $main-color;
+        line-height: 25px;
+        margin-bottom: 7px;
+    }
+    
+    
 }

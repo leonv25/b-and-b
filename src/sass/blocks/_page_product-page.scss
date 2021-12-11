@@ -1,0 +1,136 @@
+.product-page {
+    width: 100%;
+    &__presentation {
+        width: 100%;
+        display: flex;
+        padding: 0 27px;
+        .titles {
+            margin-bottom: 20px;
+        }
+        .col {
+            &:nth-child(odd) {
+                width: 30%;
+                margin-top: 40px;
+                h2 {
+                    font-size: 25px;
+                    text-align: left;
+                }
+            }
+            &:nth-child(2) {
+                width: 40%;
+                margin: 0 20px;
+            }
+           
+            &__img {
+                margin-top: 10px;
+            }
+            &__swiper {
+                filter: drop-shadow(5px 5px 25px #c4c4c4);
+                img {
+                    border-radius: 4px;
+                }
+
+                //import
+                position: relative;
+                height: 500px;
+                
+                background: #eee;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+                .swiper {
+                width: 100%;
+                height: 100%;
+                }
+                .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                }
+                .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+                .swiper {
+                width: 100%;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+                }
+                .swiper-slide {
+                background-size: cover;
+                background-position: center;
+                }
+                .mySwiper2 {
+                height: 80%;
+                width: 100%;
+                }
+                .mySwiper {
+                height: 20%;
+                box-sizing: border-box;
+                padding: 10px 0;
+                }
+                .mySwiper .swiper-slide {
+                width: 25%;
+                height: 100%;
+                opacity: 0.4;
+                }
+                .mySwiper .swiper-slide-thumb-active {
+                opacity: 1;
+                }
+                .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                }
+            }
+            
+            // &__trade {
+            // }
+            &__wrapper-btn {
+                margin-top: 10px;
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__descr {
+        margin-top: 30px;
+        width: 100%;
+        padding: 0 27px;
+        .titles {
+            h2 {
+                font-size: 25px;
+            }
+        }
+    }
+    
+    &__offer {
+        margin-top: 30px;
+        
+    }
+}
+
+
+
+    

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bath & Barrel | Баня Бочка</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -128,8 +129,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -146,8 +147,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +165,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -182,8 +183,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -200,8 +201,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -218,8 +219,8 @@
                                         Назва продукту
                                     </div>
                                     <div class="cards__wrapper-btn">
-                                        <button class="button button_card">купити</button>
-                                        <button class="button button_card">оренда</button>
+                                        <button class="button button_card buy_btn-openform">купити</button>
+                                        <button class="button button_card rent_btn-openform">оренда</button>
                                     </div>
                                 </div>
                             </div>
@@ -242,7 +243,7 @@
                                  <span>замовлення</span> оформіть заявку або зв’яжіться з нами за вказаним вище телефоном
                             </div>
                             <div class="communication__wrapper-btn">
-                                <button class="button button_communication">замовлення</button>
+                                <button class="button button_communication order_btn-openform">замовлення</button>
                             </div>
                         </div>
                     </div>
@@ -255,8 +256,8 @@
                     <div class="product__logo">
                         <img class="product__img" src="img/b_b.svg" alt="logo_prod">
                     </div>
-                    <div class="product__title">
-                        <h1 class="titles">
+                    <div class="titles">
+                        <h1>
                             Наша продукція
                         </h1>
                     </div>
@@ -267,7 +268,9 @@
             </section>
 
             <section class="advantage">
-                <h2 class="titles">Переваги</h2>
+                <div class="titles">
+                    <h2>Переваги</h2>
+                </div>
                 <div class="cards">
                     <div class="cards__wrapper">
 
@@ -367,24 +370,39 @@
             <section class="question">
                 <div class="communication">
                     <div class="communication__wrapper">
+                        
+                       
+                        <div class="question-form">
+                            <div class="form">
+                                <div class="form__title">
+                                    Залишились питання? Ми Вам зателефонуємо і дамо вдповідь на усі питання
+                                </div>
+                                <form action="#">
+                                    <div class="form__wrapper">
+                                        
+                                        <div>
+                                            <label for="phone">Ваш телефон</label>
+                                            <input name="phone" id="phone" type="tel" required="">
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <button class="button">Відправити</button>
+                                </form>
+                            </div>
+                        </div>
                         <div class="communication__img">
                             <img src="img/cards/s3.jpg" alt="background_order">
-                        </div>
-                        <div class="communication__block">
-                            <div class="communication__txt">
-                                Залишились питання? <span>Напишіть</span>
-                                нам або звяжіться за вказаним вище телефоном.
-                            </div>
-                            <div class="communication__wrapper-btn">
-                                <button class="button button_communication">написати</button>
-                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section class="gallery">
-                <h2 class="titles">Галерея</h2>
+                <div class="titles">
+                    <h2>Галерея</h2>
+                </div>
+                
                 <div class="cards">
                     <div class="cards__wrapper">
 
@@ -442,22 +460,123 @@
         </div>
     </main>
 
-    <section class="forms">
-        <div class="order-form">
+    <section class="forms" id="forms_wrapper">
+        
+        <div class="order-form" id="order_form">
             <div class="form">
-                <div class="form_title">
+                <div class="form__title">
                     Виготовлення продукції на замовлення
                 </div>
                 <form action="#">
                     <div class="form__wrapper">
                         <div>
                             <label for="name">
-                                "Ваше ім’я"
+                                Ваше ім’я
                                 <span>*</span>
                             </label>
                             <input name="user_name" type="text" required>
                         </div>
+                        <div>
+                            <label for="city">
+                                Населений пункт
+                                <span>*</span>
+                            </label>
+                            <input name="city" type="text" required>
+                        </div>
+                        
                     </div>
+                    <div class="form__wrapper">
+                        <div>
+                            <label for="mail">Email</label>
+                            <input name="mail" id="mail" type="email">
+                        </div>
+                        <div>
+                            <label for="phone">Ваш телефон <span>*</span></label>
+                            <input name="phone" id="phone" type="tel" required="">
+                        </div>
+                    </div>
+                    <label for="text">
+                        Вкажить особливості вашого замовлення <span>*</span>
+                    </label>
+                    <textarea required="" name="text" id="text"></textarea>
+                    <button class="button">Відправити</button>
+                    <div class="form__close" id="order_closeForm">×</div>
+                </form>
+            </div>
+        </div>
+
+        <div class="buy-form" id="buy_form">
+            <div class="form">
+                <div class="form__title">
+                    Введіть контактні дані для оформлення замовлення
+                </div>
+                <form action="#">
+                    <div class="form__wrapper">
+                        <div>
+                            <label for="name">
+                                Ваше ім’я
+                                <span>*</span>
+                            </label>
+                            <input name="user_name" type="text" required>
+                        </div>
+                        <div>
+                            <label for="city">
+                                Населений пункт
+                                <span>*</span>
+                            </label>
+                            <input name="city" type="text" required>
+                        </div>
+                        <div>
+                            <label for="phone">Ваш телефон <span>*</span></label>
+                            <input name="phone" id="phone" type="tel" required="">
+                        </div>
+                        
+                    </div>
+                    
+                    <button class="button">Відправити</button>
+                    <div class="form__close" id="buy_closeForm">×</div>
+                </form>
+            </div>
+        </div>
+
+        <div class="order-form" id="rent_form">
+            <div class="form">
+                <div class="form__title">
+                    Вкажіть інформацію для замовлення оренди
+                </div>
+                <form action="#">
+                    <div class="form__wrapper">
+                        <div>
+                            <label for="name">
+                                Ваше ім’я
+                                <span>*</span>
+                            </label>
+                            <input name="user_name" type="text" required>
+                        </div>
+                        <div>
+                            <label for="city">
+                                Населений пункт
+                                <span>*</span>
+                            </label>
+                            <input name="city" type="text" required>
+                        </div>
+                        <div>
+                            <label for="phone">Ваш телефон <span>*</span></label>
+                            <input name="phone" id="phone" type="tel" required="">
+                        </div>
+                    </div>
+                    <div class="form__wrapper">
+                        <div>
+                            <label for="time">Тривалість оренди (днів) <span>*</span></label>
+                            <input name="time" id="time" type="number" min="1" required>
+                        </div>
+                        <div>
+                            <label for="date">Дата початку оренди <span>*</span></label>
+                            <input name="date" id="date" type="date" min="2021-12-11" required>
+                        </div>
+                    </div>
+                    <button class="button">Відправити</button>
+                    <div class="form__close" id="rent_closeForm">×</div>
                 </form>
             </div>
         </div>
@@ -497,7 +616,9 @@
                     </div>
                 </div>
                 <div class="footer__mail">
-                    E:mail: mymail@gmail.com
+                    <a href="mailto:mymail@gmail.com">
+                        E:mail: mymail@gmail.com
+                    </a>
                 </div>
             </div>
             <div class="footer__container">
@@ -528,6 +649,7 @@
         </div>
     </footer>
 
+    <script src="js/product-page_swiper.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>

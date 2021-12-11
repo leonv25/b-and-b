@@ -22,6 +22,70 @@ module.exports = addMobilemenu;
 
 /***/ }),
 
+/***/ "./src/js/parts/modalWindow.js":
+/*!*************************************!*\
+  !*** ./src/js/parts/modalWindow.js ***!
+  \*************************************/
+/***/ (function(module) {
+
+//btn_open - id кнопки визову форми
+//btn_close - id кнопки закриття форми
+//forms_block - id елемент-обгортки в якому містяться всі форми
+//form - елемент- id обготрки однієї конкретної форми
+function useModalWindow(class_btn_open, id_btn_close, id_forms_block, id_form) {
+  var btn_open = document.querySelectorAll(class_btn_open),
+      btn_close = document.getElementById(id_btn_close),
+      forms_block = document.getElementById(id_forms_block),
+      form = document.getElementById(id_form);
+  btn_open.forEach(function (item) {
+    if (item && btn_close && forms_block && form) {
+      item.addEventListener('click', function () {
+        forms_block.style.display = 'block';
+        form.style.display = 'block';
+      });
+      btn_close.addEventListener('click', function () {
+        forms_block.style.display = 'none';
+        form.style.display = 'none';
+      });
+    }
+  });
+}
+
+module.exports = useModalWindow;
+
+/***/ }),
+
+/***/ "./src/js/parts/product_swiper_options.js":
+/*!************************************************!*\
+  !*** ./src/js/parts/product_swiper_options.js ***!
+  \************************************************/
+/***/ (function(module) {
+
+function product_swiper_options() {
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    thumbs: {
+      swiper: swiper
+    }
+  });
+}
+
+module.exports = product_swiper_options;
+
+/***/ }),
+
 /***/ "./src/js/parts/slider.js":
 /*!********************************!*\
   !*** ./src/js/parts/slider.js ***!
@@ -32,24 +96,26 @@ module.exports = addMobilemenu;
 //slideClass - клас slide із зміною властивості для display з none на block, при присвоєнні цього класу блок із слайдом відображається коли всі інші , які не мають цюго класу не відображаются
 //slideTime - час через який змінюється один слайд на інший
 function runSlider(slide, slideClass, slideTime) {
-  function slideImg() {
-    var i = 0;
-    var id = setInterval(frame, slideTime);
+  if (slide[0] && slideClass[0]) {
+    function slideImg() {
+      var i = 0;
+      var id = setInterval(frame, slideTime);
 
-    function frame() {
-      if (i == slide.length - 1) {
-        slide[0].classList.add(slideClass);
-        slide[slide.length - 1].classList.remove(slideClass);
-        i = 0;
-      } else {
-        i++;
-        slide[i - 1].classList.remove(slideClass);
-        slide[i].classList.add(slideClass);
+      function frame() {
+        if (i == slide.length - 1) {
+          slide[0].classList.add(slideClass);
+          slide[slide.length - 1].classList.remove(slideClass);
+          i = 0;
+        } else {
+          i++;
+          slide[i - 1].classList.remove(slideClass);
+          slide[i].classList.add(slideClass);
+        }
       }
     }
-  }
 
-  slideImg();
+    slideImg();
+  }
 }
 
 module.exports = runSlider;
@@ -185,12 +251,23 @@ window.addEventListener('DOMContentLoaded', function () {
       humburger_class = 'header__humburger_close',
       menu = document.querySelector('.header__menu'),
       menu_class = 'header__menu_mini';
-  addMobilemenu(humburger, humburger_class, menu, menu_class); //slider
+  addMobilemenu(humburger, humburger_class, menu, menu_class); //slider head page
 
   var runSlider = __webpack_require__(/*! ./parts/slider */ "./src/js/parts/slider.js");
 
   var slide = document.getElementsByClassName('slider__slide');
   runSlider(slide, 'slider__slide_active', 5000);
+  console.log(slide); //modalWindows
+
+  var useModalWindow = __webpack_require__(/*! ./parts/modalWindow */ "./src/js/parts/modalWindow.js");
+
+  useModalWindow('.order_btn-openform', 'order_closeForm', 'forms_wrapper', 'order_form');
+  useModalWindow('.buy_btn-openform', 'buy_closeForm', 'forms_wrapper', 'buy_form');
+  useModalWindow('.rent_btn-openform', 'rent_closeForm', 'forms_wrapper', 'rent_form'); //product-page
+
+  var product_swiper_options = __webpack_require__(/*! ./parts/product_swiper_options */ "./src/js/parts/product_swiper_options.js");
+
+  product_swiper_options();
 });
 }();
 /******/ })()

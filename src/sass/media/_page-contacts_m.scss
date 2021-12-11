@@ -1,0 +1,37 @@
+@media (max-width: 1200px) {
+    .contacts {
+        height: auto;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        .titles {
+            h1 {
+                text-align: center;
+            }
+        }
+        
+        .col:first-child {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+            
+        }
+        .col:last-child {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+        .col {
+            &__tel {
+                justify-content: center;
+            }
+            &__mail-wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+        
+        
+    }
+
+}

@@ -7,15 +7,17 @@
     }
     &__card {
         position: relative;
-        min-width: 31vw;
+        min-width: 31.1vw;
         height: 22vw;
         padding: 0.5%;
+        box-sizing: content-box;
     }
     
     &__background-img {
-        min-width: 31vw;
+        min-width: 31.1vw;
         height: 22vw;
         object-fit: cover;
+        border-radius: 4px;
     }
     
     &__block {

@@ -1,30 +1,35 @@
 .communication {
     overflow: hidden;
+    filter: drop-shadow(5px 5px 25px #c4c4c4);
+    border-radius: 4px;
     
     &__wrapper {
         width: 100%;
         height: 50vh;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
     &__img {
+        width: 100%;
         img {
+            z-index: 0;
             width: 100%;
-            height: 50vh;
+            height: 100%;
             object-fit: cover;
+            
         }
     }
     &__block {
+        padding: 0 5%;
         z-index: 1;
         position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding-top: 18px;
-        height: 100vh;
-        width: 80%;
+        flex-direction: column;
     }
     &__txt {
         font-size: 23px;
@@ -45,6 +50,27 @@
             font-size: 18px;
             line-height: 17px;
             margin-top: 15%;
+        }
+        
+    }
+    .question-form {
+        z-index: 1;
+        position: absolute;
+        .form {
+            margin-top: 0px;
+            background: rgb(248, 244, 244, 0.5);
+            input {
+                background: rgb(248, 244, 244, 0.0);
+            }
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            label {
+                text-align: center;
+            }
         }
         
     }

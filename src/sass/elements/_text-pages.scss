@@ -1,0 +1,43 @@
+.text-row {
+    color: rgb(56, 51, 51);
+    &__text {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 12px;
+        text-align: justify;
+    }
+    
+    h3 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 500;
+        text-align: justify;
+    }
+    
+    li {
+        font-size: 18px;
+        text-align: justify;
+        margin-top: 3px;
+        margin-left: 30px;
+        list-style-image: url("../icons/check2-circle.svg");
+        
+    }
+    .subtitle {
+        text-align: center;
+    }
+    .subtitle-paragraph {
+        font-size: 18px;
+        margin-top: 15px;
+        font-weight: 500;
+        text-align: justify;
+    }
+    &__color_text {
+        color: $main-color;
+    }
+}
