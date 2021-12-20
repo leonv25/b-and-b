@@ -21,6 +21,10 @@
             margin-bottom: 30px;
         }
         .col {
+            &__city {
+               text-align: center;
+               margin-top: 20px; 
+            }
             &__tel {
                 justify-content: center;
             }
@@ -30,8 +34,23 @@
                 flex-direction: column;
             }
         }
-        
-        
     }
+}
 
+@media (max-width: 500px) {
+    .contacts {
+        .col {
+            &__tel {
+                flex-direction: column;
+            }
+            &__tel-title {
+                text-align: center;
+            }
+            &__tel-wrapper:first-child {
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+    
+    
 }

@@ -30,8 +30,12 @@
         position: absolute;
         top: 0;
         margin-top: 50vh;
-        color: $main-color;
+        margin-left: 10px;
+        color: $main-color_b;
         padding-left: 50px;
+        padding-bottom: 5px;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 5px;
 
     }
     &__text-title {
@@ -40,14 +44,13 @@
         line-height: 50px;
         width: 550px;
         margin-bottom: 35px;
-        text-shadow: 1px 1px 0px rgb(0, 0, 0);
+        //text-shadow: 1px 1px 5px rgb(255, 255, 255);
     }
     &__text-description {
         font-size: 17px;
-        font-weight: 300;
+        font-weight: 700;
         line-height: 17px;
         width: 450px;
-        color: #fff;
-        text-shadow: 1px 1px 0px #000;
+        //text-shadow:  1px 1px 0px rgb(15, 15, 15);
     }
 }

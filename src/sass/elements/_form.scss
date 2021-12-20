@@ -13,7 +13,7 @@
 .form {
     position: relative;
     margin: 70px auto 0;
-    width: 575px;
+    width: 555px;
     max-height: 565px;
     overflow: auto;
     padding: 20px 40px;
@@ -22,6 +22,7 @@
     border-radius: 4px;
     
     &__title {
+        padding: 0 10px;
         font-weight: 500;
         line-height: 18px;
         font-size: 18px;
@@ -77,6 +78,21 @@
         font-size: 25px;
         cursor: pointer;
         color: $main-color;
+    }
+    &__tel {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    &__tel-txt  {
+        margin-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            color: $main-color;
+        }
     }
     
 }

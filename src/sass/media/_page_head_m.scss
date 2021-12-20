@@ -1,0 +1,52 @@
+@media (max-width: 1200px) {
+    .product {
+        &__descr {
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .product {
+        &__descr {
+            h1 {
+                font-size: 27px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .product {
+        &__descr {
+            h1 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .product {
+        &__descr {
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

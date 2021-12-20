@@ -1,4 +1,10 @@
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+    .footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 591px) {
     .footer {
         &__wrapper {
             padding-left: 10px;

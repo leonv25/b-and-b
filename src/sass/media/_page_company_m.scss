@@ -1,0 +1,12 @@
+@media (max-width: 575px) {
+    .company {
+        &__left-img,
+        &__right-img
+         {
+            padding-left: 3%;
+            padding-right: 3%;
+        }
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

@@ -29,14 +29,14 @@ main {
             padding: 0 1.8%;
         }
         .advantage {
-            margin-top: 100px;
+            margin-top: 50px;
         }
         .question {
-            margin-top: 10px;
+            margin-top: 30px;
             padding: 0 1.8%;
         }
         .gallery {
-            margin-top: 10px;
+            margin-top: 30px;
         }
         //page catalog
         .catalog {
@@ -101,5 +101,10 @@ main {
 @import 'media/form_m';
 @import 'media/footer_m';
 @import 'media/page-contacts_m';
+@import 'media/page_product-page_m';
+@import 'media/page_company_m';
+@import 'media/page_head_m';
+@import 'media/element_titles_m';
+@import 'media/element_text-pages';
 
 @import 'import_css/swiper';

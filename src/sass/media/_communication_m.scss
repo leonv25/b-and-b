@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-    .order {
+    .communication {
         &__txt {
             font-size: 21px;
         }
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 991px) {
-    .order {
+    .communication {
         &__txt {
             font-size: 20px;
         }
@@ -23,9 +23,17 @@
 // }
 
 @media (max-width: 575px) {
-    .order {
+    .communication {
         &__txt {
             font-size: 17px;
+        }
+    }
+
+}
+@media (max-width: 380px) {
+    .communication {
+        &__txt {
+            font-size: 15px;
         }
     }
 

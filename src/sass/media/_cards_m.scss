@@ -13,11 +13,11 @@
 @media (max-width: 991px) {
     .cards {
         &__block {
-            font-size: 16px;
+            font-size: 15px;
         }
        
         .button_card {
-            font-size: 16px;
+            font-size: 14px;
         }
     }
 }
@@ -29,44 +29,42 @@
         }
        
         .button_card {
-            font-size: 14px;
+            font-size: 10.5px;
         }
     }
 }
 
 @media (max-width: 575px) {
     .cards {
-        &__card {
-            min-width: 90vw;
-            height: 60vw;
-        }
         
-        &__background-img {
-            min-width: 94vw;
-            height: 60vw;
-        }
-        &__block {
-            top: 12vw;
-            left: 12vw;
-            width: 70vw;
-            height: 35vw;
-            font-size: 20px;
-        }
-        &__logo {
-            padding-bottom: 2vw;
-            img {
-                width: 9vw;
-            }
-        }
-        &__txt {
-            padding-bottom: 3vw;
-        }
-        .button_card {
-            width: 25vw;
-            height: 8vw;
-            font-size: 20px;
-            font-weight: 300;
+        &__card {
+            min-width: 47.5vw;
+            height: 33vw;
+            padding: 0.5%;
+            box-sizing: content-box;
         }
 
+        &__background-img {
+            min-width: 47.5vw;
+            height: 33vw;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        &__block {
+            font-size: 12px;
+        }
+        .button_card {
+            font-size: 11px;
+        }
+
+    }
+}
+
+@media (max-width: 350px) {
+    .cards {
+        .button_card {
+            font-size: 9px;
+        }
     }
 }

@@ -3,8 +3,8 @@
     width: 100%;
     height: 190px;
     bottom: -130px;
-    background: linear-gradient(#f9ede4 50%,#ffd5b6);
-    font-size: 12px;
+    background: linear-gradient(#eeeeee 50%,$main-color);
+    font-size: 15px;
     
     &__wrapper {
         padding-top: 20px;
@@ -32,9 +32,9 @@
     }
 
     &__logo {
-        display: block;
         img {
-            width: 60px;
+            display: block;
+            width: 100px;
         }
     }
 
@@ -57,9 +57,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         border-top: #ebebeb 1px solid;
-        span {
+        p {
             display: block;
+            color: rgb(255, 255, 255);
         }
     }
 }

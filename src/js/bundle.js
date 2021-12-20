@@ -1,6 +1,33 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/parts/current_date.js":
+/*!**************************************!*\
+  !*** ./src/js/parts/current_date.js ***!
+  \**************************************/
+/***/ (function(module) {
+
+//inputDate - тег input з атребутом name="date", скрипт буде працювати, якщо додатково задати атребут min в html
+//.toISOString().split('T')[0] задається для того щоб обрізати лишні дані, які видає функція(через них не атребут min не розпізнає формат дати)
+function currentDate(inputDate) {
+  var elements = document.querySelectorAll(inputDate);
+
+  if (elements) {
+    elements.forEach(function (item) {
+      var minDate = item.getAttribute('min'),
+          curDate = new Date().toISOString().split('T')[0];
+
+      if (minDate && curDate) {
+        item.setAttribute('min', curDate);
+      }
+    });
+  }
+}
+
+module.exports = currentDate;
+
+/***/ }),
+
 /***/ "./src/js/parts/header.js":
 /*!********************************!*\
   !*** ./src/js/parts/header.js ***!
@@ -256,14 +283,17 @@ window.addEventListener('DOMContentLoaded', function () {
   var runSlider = __webpack_require__(/*! ./parts/slider */ "./src/js/parts/slider.js");
 
   var slide = document.getElementsByClassName('slider__slide');
-  runSlider(slide, 'slider__slide_active', 5000);
-  console.log(slide); //modalWindows
+  runSlider(slide, 'slider__slide_active', 5000); //modalWindows
 
   var useModalWindow = __webpack_require__(/*! ./parts/modalWindow */ "./src/js/parts/modalWindow.js");
 
   useModalWindow('.order_btn-openform', 'order_closeForm', 'forms_wrapper', 'order_form');
   useModalWindow('.buy_btn-openform', 'buy_closeForm', 'forms_wrapper', 'buy_form');
-  useModalWindow('.rent_btn-openform', 'rent_closeForm', 'forms_wrapper', 'rent_form'); //product-page
+  useModalWindow('.rent_btn-openform', 'rent_closeForm', 'forms_wrapper', 'rent_form'); //current date for the form
+
+  var currentDate = __webpack_require__(/*! ./parts/current_date */ "./src/js/parts/current_date.js");
+
+  currentDate('input#date'); //product-page
 
   var product_swiper_options = __webpack_require__(/*! ./parts/product_swiper_options */ "./src/js/parts/product_swiper_options.js");
 

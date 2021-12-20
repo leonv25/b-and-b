@@ -1,7 +1,33 @@
+@media (max-width: 570px) {
+    .form {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            div {
+                
+            }
+            
+        }
+        &__tel {
+            align-items: center;
+            flex-direction: column;
+        }
+        form {
+            button {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
 @media (max-height: 480px) {
     .form {
         label{
             margin-top: 5px;
+            font-size: 14px;
         }
         input {
             margin-top: 5px;
@@ -11,6 +37,10 @@
         textarea {
             padding: 5px;
         }
+        &__title {
+            font-size: 16px;
+        }
     }
+    
 
 }
