@@ -37,6 +37,7 @@ main {
         }
         .gallery {
             margin-top: 30px;
+            transition: 0.5s all;
         }
         //page catalog
         .catalog {
@@ -48,10 +49,11 @@ main {
     }
 }
 .forms {
-    display: none;
+    display: block;
     opacity: 1;
     position: fixed;
     top: 0;
+    left: 100%;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.3);
@@ -67,6 +69,11 @@ main {
         width: 100%;
         height: 100%;
     }
+    .rent-form {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -77,6 +84,7 @@ main {
 @import 'elements/communication';
 @import 'elements/form';
 @import 'elements/text-pages';
+@import 'elements/viewer';
 
 @import 'blocks/info';
 @import 'blocks/header';

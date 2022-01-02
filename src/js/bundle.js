@@ -38,11 +38,13 @@ module.exports = currentDate;
 //humburger_class - 'клас для humburger який його змінює'
 //menu - document.querySelector('.клас ul з меню сайту')
 //menu_class - 'клас для menu який його змінює'
-function addMobilemenu(humburger, humburger_class, menu, menu_class) {
-  humburger.addEventListener('click', function () {
-    humburger.classList.toggle(humburger_class);
-    menu.classList.toggle(menu_class);
-  });
+function addMobilemenu(humburger, humburger_class, menu, menu_class_open, menu_class_close) {
+  if (humburger && menu) {
+    humburger.addEventListener('click', function () {
+      humburger.classList.toggle(humburger_class);
+      menu.classList.toggle(menu_class_open);
+    });
+  }
 }
 
 module.exports = addMobilemenu;
@@ -67,11 +69,11 @@ function useModalWindow(class_btn_open, id_btn_close, id_forms_block, id_form) {
   btn_open.forEach(function (item) {
     if (item && btn_close && forms_block && form) {
       item.addEventListener('click', function () {
-        forms_block.style.display = 'block';
+        forms_block.style.left = '0';
         form.style.display = 'block';
       });
       btn_close.addEventListener('click', function () {
-        forms_block.style.display = 'none';
+        forms_block.style.left = '100%';
         form.style.display = 'none';
       });
     }
@@ -160,6 +162,61 @@ function test_func() {
 }
 
 module.exports = test_func;
+
+/***/ }),
+
+/***/ "./src/js/parts/viewer.js":
+/*!********************************!*\
+  !*** ./src/js/parts/viewer.js ***!
+  \********************************/
+/***/ (function(module) {
+
+//wrapper_section - обготка для елементів, які мають містити перегляд
+//target_element - елемент, який має переглядатись(img)
+function viewer_img(wrapper_section, target_element) {
+  var parentElement = document.querySelector(wrapper_section),
+      select_img = document.querySelectorAll(target_element);
+
+  if (parentElement && select_img) {
+    var viewer = document.createElement('div'),
+        viewer__wrapper = document.createElement('div'),
+        viewer__close = document.createElement('div'),
+        span_1 = document.createElement('span'),
+        span_2 = document.createElement('span'),
+        viewer__img = document.createElement('div'),
+        img = document.createElement('img');
+    viewer.classList.add('viewer');
+    viewer__wrapper.classList.add('viewer__wrapper');
+    viewer__close.classList.add('viewer__close');
+    viewer__img.classList.add('viewer__img');
+    viewer__close.appendChild(span_1);
+    viewer__close.appendChild(span_2);
+    viewer__img.appendChild(img);
+    viewer__wrapper.appendChild(viewer__close);
+    viewer__wrapper.appendChild(viewer__img);
+    viewer.appendChild(viewer__wrapper);
+    parentElement.appendChild(viewer);
+    select_img.forEach(function (item) {
+      item.addEventListener('click', function () {
+        var src = item.getAttribute('src');
+
+        if (viewer.classList.contains('viewer_active')) {
+          img.setAttribute('src', src);
+        } else {
+          img.setAttribute('src', src);
+          viewer.classList.add('viewer_active');
+        }
+      });
+    });
+    viewer__close.addEventListener('click', function () {
+      if (viewer.classList.contains('viewer_active')) {
+        viewer.classList.remove('viewer_active');
+      }
+    });
+  }
+}
+
+module.exports = viewer_img;
 
 /***/ }),
 
@@ -277,8 +334,8 @@ window.addEventListener('DOMContentLoaded', function () {
   var humburger = document.querySelector('.header__humburger'),
       humburger_class = 'header__humburger_close',
       menu = document.querySelector('.header__menu'),
-      menu_class = 'header__menu_mini';
-  addMobilemenu(humburger, humburger_class, menu, menu_class); //slider head page
+      menu_class_open = 'header__menu_mini';
+  addMobilemenu(humburger, humburger_class, menu, menu_class_open); //slider head page
 
   var runSlider = __webpack_require__(/*! ./parts/slider */ "./src/js/parts/slider.js");
 
@@ -297,7 +354,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var product_swiper_options = __webpack_require__(/*! ./parts/product_swiper_options */ "./src/js/parts/product_swiper_options.js");
 
-  product_swiper_options();
+  product_swiper_options(); //viewer for img
+
+  var viewer_imgs = __webpack_require__(/*! ./parts/viewer */ "./src/js/parts/viewer.js");
+
+  viewer_imgs('.gallery', '.cards__background-img_gallery');
+  viewer_imgs('.company', '.cards__background-img_gallery');
 });
 }();
 /******/ })()

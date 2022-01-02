@@ -11,11 +11,11 @@ function useModalWindow(class_btn_open, id_btn_close, id_forms_block, id_form) {
         btn_open.forEach(function(item) {
             if (item && btn_close && forms_block && form) {
                 item.addEventListener('click', function() {
-                    forms_block.style.display = 'block';
+                    forms_block.style.left = '0';
                     form.style.display = 'block';
                 });
                 btn_close.addEventListener('click', function() {
-                    forms_block.style.display = 'none';
+                    forms_block.style.left = '100%';
                     form.style.display = 'none';
                 });
             }

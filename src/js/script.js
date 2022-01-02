@@ -17,8 +17,8 @@ window.addEventListener('DOMContentLoaded', function() {
         let humburger = document.querySelector('.header__humburger'),
             humburger_class = 'header__humburger_close',
             menu = document.querySelector('.header__menu'),
-            menu_class = 'header__menu_mini';
-        addMobilemenu(humburger, humburger_class, menu, menu_class);
+            menu_class_open = 'header__menu_mini';
+        addMobilemenu(humburger, humburger_class, menu, menu_class_open);
 
     //slider head page
     let runSlider = require('./parts/slider');
@@ -40,6 +40,10 @@ window.addEventListener('DOMContentLoaded', function() {
     let product_swiper_options = require('./parts/product_swiper_options');
         product_swiper_options();
     
+    //viewer for img
+    let viewer_imgs = require('./parts/viewer');
+        viewer_imgs('.gallery', '.cards__background-img_gallery');
+        viewer_imgs('.company', '.cards__background-img_gallery');
 
 
 });

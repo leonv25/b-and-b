@@ -32,3 +32,14 @@
         }
     }
 }
+
+@media (max-width: 375px) {
+    .info {
+        &__info-text {
+            font-size: 9px;
+        }
+        img {
+            margin-left: 1px;
+        }
+    }
+}
