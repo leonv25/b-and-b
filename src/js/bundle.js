@@ -340,7 +340,7 @@ window.addEventListener('DOMContentLoaded', function () {
   var runSlider = __webpack_require__(/*! ./parts/slider */ "./src/js/parts/slider.js");
 
   var slide = document.getElementsByClassName('slider__slide');
-  runSlider(slide, 'slider__slide_active', 5000); //modalWindows
+  runSlider(slide, 'slider__slide_active', 10000); //modalWindows
 
   var useModalWindow = __webpack_require__(/*! ./parts/modalWindow */ "./src/js/parts/modalWindow.js");
 

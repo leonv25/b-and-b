@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
     let runSlider = require('./parts/slider');
 
         let slide = document.getElementsByClassName('slider__slide');
-        runSlider(slide, 'slider__slide_active', 5000);
+        runSlider(slide, 'slider__slide_active', 10000);
     
     //modalWindows
     let useModalWindow = require('./parts/modalWindow');
