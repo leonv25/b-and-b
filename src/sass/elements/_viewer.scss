@@ -53,14 +53,14 @@
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 }
 
 .viewer_active {
-    width: 75%;
-    height: 89%;
+    width: 100%;
+    height: 93%;
     top: 69px;
     left: 50%;
     .viewer__close {
