@@ -6,7 +6,7 @@
         flex-wrap: wrap;
     }
     &__card {
-        min-width: 31.1vw;
+        width: 31.1vw;
         height: 22vw;
         padding: 0.5%;
         box-sizing: content-box;
@@ -20,7 +20,7 @@
     }
     
     &__background-img {
-        min-width: 31.1vw;
+        width: 31.1vw;
         height: 22vw;
         object-fit: cover;
         border-radius: 4px;
@@ -39,7 +39,7 @@
         background-color: rgba(255,255,255,0.8);
         border-radius: 5px;
         text-transform: uppercase;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
     }
     &__logo {
