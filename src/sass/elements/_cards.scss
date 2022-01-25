@@ -76,3 +76,12 @@
         font-weight: 300;
     }
 }
+
+.advantage {
+    .cards {
+        &__block {
+            font-weight: 700;
+            color: $main-color;
+        }
+    }
+}
