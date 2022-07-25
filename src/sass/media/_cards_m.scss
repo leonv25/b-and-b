@@ -5,7 +5,7 @@
         }
        
         .button_card {
-            font-size: 18px;
+            font-size: 13px;
         }
     }
 }
@@ -17,7 +17,7 @@
         }
        
         .button_card {
-            font-size: 14px;
+            font-size: 10px;
         }
     }
 }
@@ -29,7 +29,8 @@
         }
        
         .button_card {
-            font-size: 10.5px;
+            width: 32%;
+            font-size: 9px;
         }
     }
 }
@@ -55,16 +56,25 @@
         }
         
         .button_card {
-            font-size: 11px;
+            font-size: 10px;
         }
 
+    }
+}
+
+@media (max-width: 450px) {
+    .cards {
+        .button_card {
+            font-size: 9px;
+        }
     }
 }
 
 @media (max-width: 350px) {
     .cards {
         .button_card {
-            font-size: 9px;
+            width: 40%;
+            font-size: 7px;
         }
     }
 }
